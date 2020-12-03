@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import login.Login;
 import main.Main;
 import model.Model;
 
@@ -25,7 +26,16 @@ public class LoginController {
 
     @FXML
     void sendLogin(ActionEvent event) {
-
+        if (model.isCorrectLogin(new Login(name_txt.getText(), pwd_txt.getText()))){
+            main.changeScene();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Wrong Login");
+            //alert.setHeaderText("Wrong Username or Password");
+            alert.setHeaderText(null);
+            alert.setContentText("Wrong Username or Password");
+            alert.showAndWait();
+        }
 
     }
 

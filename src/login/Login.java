@@ -25,5 +25,11 @@ public class Login {
         this.name = name;
     }
 
-
+    @Override
+    public String toString() {
+        return "Login{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

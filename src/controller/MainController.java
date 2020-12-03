@@ -22,7 +22,19 @@ public class MainController {
 
     @FXML
     void ask(ActionEvent event){
-
+        if (question_txt.getText().equals("") || !question_txt.getText().endsWith("?")) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("No question");
+            //alert.setHeaderText("Wrong Username or Password");
+            alert.setHeaderText("Enter a valid question");
+            alert.setContentText("Valid question:  question?");
+            alert.showAndWait();
+        } else if(question_txt.getText().contains("SEW")){
+            answer_lbl.setText(model.getPositiveAnswers(question_txt.getText()));
+        }
+        else {
+            answer_lbl.setText(model.getRandomAnswers(question_txt.getText()));
+        }
     }
 
     @FXML
