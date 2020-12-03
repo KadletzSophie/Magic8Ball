@@ -25,5 +25,5 @@ public class Login {
         this.name = name;
     }
 
-    
+
 }
