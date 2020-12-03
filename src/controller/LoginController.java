@@ -11,6 +11,11 @@ import login.Login;
 import main.Main;
 import model.Model;
 
+/**
+ * @author Sophie Kadletz
+ * @version 03.12.2020
+ */
+
 public class LoginController {
     private Model model;
     private Main main;
@@ -23,6 +28,15 @@ public class LoginController {
 
     @FXML
     private Button login_bt;
+
+    @FXML
+    private Button cancel_bt;
+
+    @FXML
+    void cancelLogin(ActionEvent event) {
+        name_txt.clear();
+        pwd_txt.clear();
+    }
 
     @FXML
     void sendLogin(ActionEvent event) {

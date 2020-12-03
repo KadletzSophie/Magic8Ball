@@ -1,5 +1,10 @@
 package login;
 
+/**
+ * @author Sophie Kadletz
+ * @version 03.12.2020
+ */
+
 public class Login {
     private String name;
     private String password;
@@ -19,10 +24,6 @@ public class Login {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override
